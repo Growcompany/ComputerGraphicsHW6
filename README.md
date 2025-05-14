@@ -7,20 +7,25 @@
 - Q2 - Gouraud shading 구현
 - Q3 - Phong shading 구현
 
-## Result Image
-
-아래는 결과 이미지입니다:
-
-![Flat Shading](./Assignment6_Q1_Img.png)
-![Gouraud Shading](./Assignment6_Q2_Img.png)
-![Phong Shading](./Assignment6_Q3_Img.png)
-
 ---
 
 ## Table of Contents
+- [Result Image](#result-image)
 - [Compilation Instructions](#compilation-instructions)
 - [Run Instructions](#run-instructions)
 - [Short Description](#short-description)
+
+---
+## Result Image
+
+### Flat Shading
+![Flat Shading](./Assignment6_Q1_Img.png)
+
+### Gouraud Shading
+![Gouraud Shading](./Assignment6_Q2_Img.png)
+
+### Phong Shading
+![Phong Shading](./Assignment6_Q3_Img.png)
 
 ---
 
