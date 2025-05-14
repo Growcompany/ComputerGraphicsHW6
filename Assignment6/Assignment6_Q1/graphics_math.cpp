@@ -57,22 +57,26 @@ Mat4 Scale(float sx, float sy, float sz) {
     Mat4 M = Identity(); M.m[0][0] = sx; M.m[1][1] = sy; M.m[2][2] = sz; return M;
 }
 Mat4 MakePerspective(float l, float r, float b, float t, float n, float f) {
-    Mat4 P{};
-    P.m[0][0] = 2 * n / (r - l);   P.m[0][2] = (r + l) / (r - l);
-    P.m[1][1] = 2 * n / (t - b);   P.m[1][2] = (t + b) / (t - b);
-    P.m[2][2] = -(f + n) / (f - n); P.m[2][3] = -2 * f * n / (f - n);
-    P.m[3][2] = -1;
+	// n, f는 양수여야 한다.
+    n = fabsf(n); 
+    f = fabsf(f);
+
+    Mat4 P = { {
+        { 2 * n / (r - l),       0.0f,              (r + l) / (r - l),        0.0f },
+        { 0.0f,                  2 * n / (t - b),   (t + b) / (t - b),        0.0f },
+        { 0.0f,                  0.0f,             -(f + n) / (f - n),   -2 * f * n / (f - n) },
+        { 0.0f,                  0.0f,             -1.0f,                     0.0f }
+    } };
     return P;
 }
 
 Mat4 MakeViewport(int nx, int ny) {
-    Mat4 W = Identity();
-    W.m[0][0] = nx / 2.0f;
-    W.m[0][3] = (nx - 1) / 2.0f;
-    W.m[1][1] = -ny / 2.0f;
-    W.m[1][3] = (ny - 1) / 2.0f;
-    W.m[2][2] = 0.5f;
-    W.m[2][3] = 0.5f;
+    Mat4 W = { {
+              { nx / 2.0f,  0.0f,       0.0f,        (nx - 1) / 2.0f },
+              { 0.0f,     ny / 2.0f,    0.0f,        (ny - 1) / 2.0f },
+              { 0.0f,     0.0f,       1.0f,        0.0f       },
+              { 0.0f,     0.0f,       0.0f,        1.0f       }
+            } };
     return W;
 }
 

@@ -80,10 +80,8 @@ std::vector<Color> rasterizeScene(int NX, int NY) {
 		Vec4 v4{ v.x,v.y,v.z,1.0f };
 		Vec4 clip = mul(P, mul(V, mul(M, v4)));
 		Vec4 ndc{ clip.x / clip.w, clip.y / clip.w, clip.z / clip.w, 1.0f };
-		float sx = (1.0f - ndc.x) * 0.5f * NX;
-		float sy = (1.0f - ndc.y) * 0.5f * NY;
-		return Vec4{ sx, sy, ndc.z, clip.w };
-		};
+		return mul(W, ndc);
+	};
 
 	int drawn = 0;
 	// 5) 삼각형 래스터화
@@ -108,8 +106,8 @@ std::vector<Color> rasterizeScene(int NX, int NY) {
 		Vec3 N2 = vertexNormals[i2];
 
 		// 6) Bounding box 계산
-		int x0i = int(v0.x), x1i = int(v1.x), x2i = int(v2.x);
-		int y0i = int(v0.y), y1i = int(v1.y), y2i = int(v2.y);
+		int x0i = int(v0.x + 0.5f), x1i = int(v1.x + 0.5f), x2i = int(v2.x + 0.5f);
+		int y0i = int(v0.y + 0.5f), y1i = int(v1.y + 0.5f), y2i = int(v2.y + 0.5f);
 
 		int xmin = std::max(0, std::min({ x0i, x1i, x2i }));
 		int xmax = std::min(NX - 1, std::max({ x0i, x1i, x2i }));
