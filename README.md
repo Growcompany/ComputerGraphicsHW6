@@ -63,6 +63,9 @@
 
 ### Q1: Flat Shading
 
+**Flat Shading**은 삼각형 하나당 한 번만 조명(Ambient/Diffuse/Specular)을 계산하고, 그 결과 색을 삼각형 전체에 고정시키는 방식입니다.  
+주요 단계:
+
 1. **Create sphere mesh**  
    삼각형들로 이루어진 구의 기하 정보를 메모리에 생성하여 정점과 인덱스 배열에 저장합니다.
 
@@ -96,6 +99,9 @@
 ---
 
 ### Q2: Gouraud Shading
+
+**Gouraud Shading**은 각 정점(vertex)에서 조명을 계산한 뒤, 정점 색을 삼각형 내부에서 바리센트릭 보간으로 퍼뜨리는 방식입니다.  
+주요 단계:
 
 1. **Create sphere mesh**  
    삼각형들로 이루어진 구의 기하 정보를 메모리에 생성하여 정점과 인덱스 배열에 저장합니다.
@@ -142,6 +148,10 @@
 ---
 
 ### Q3: Phong Shading
+
+**Phong Shading**은 per-pixel 방식으로 법선 벡터를 보간(interpolate)한 뒤,
+각 픽셀마다 Ambient/Diffuse/Specular 조명을 계산하는 셰이딩 기법입니다.  
+주요 단계:
 
 1. **Create sphere mesh**  
    삼각형 기반 구의 정점·인덱스 데이터를 초기화합니다.
