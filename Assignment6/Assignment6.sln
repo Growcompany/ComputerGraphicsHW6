@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment6_Q2", "Assignment6_Q2\Assignment6_Q2.vcxproj", "{F412FE84-6044-4FD6-88DE-819283CB92C5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment6_Q1", "Assignment6_Q1\Assignment6_Q1.vcxproj", "{5F31BD70-C423-4A49-9A80-A533645E3051}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment6_Q3", "Assignment6_Q3\Assignment6_Q3.vcxproj", "{73334238-8374-40A1-9FBE-EE5016E6D291}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F412FE84-6044-4FD6-88DE-819283CB92C5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F412FE84-6044-4FD6-88DE-819283CB92C5}.Debug|Win32.Build.0 = Debug|Win32
+		{F412FE84-6044-4FD6-88DE-819283CB92C5}.Release|Win32.ActiveCfg = Release|Win32
+		{F412FE84-6044-4FD6-88DE-819283CB92C5}.Release|Win32.Build.0 = Release|Win32
+		{5F31BD70-C423-4A49-9A80-A533645E3051}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5F31BD70-C423-4A49-9A80-A533645E3051}.Debug|Win32.Build.0 = Debug|Win32
+		{5F31BD70-C423-4A49-9A80-A533645E3051}.Release|Win32.ActiveCfg = Release|Win32
+		{5F31BD70-C423-4A49-9A80-A533645E3051}.Release|Win32.Build.0 = Release|Win32
+		{73334238-8374-40A1-9FBE-EE5016E6D291}.Debug|Win32.ActiveCfg = Debug|Win32
+		{73334238-8374-40A1-9FBE-EE5016E6D291}.Debug|Win32.Build.0 = Debug|Win32
+		{73334238-8374-40A1-9FBE-EE5016E6D291}.Release|Win32.ActiveCfg = Release|Win32
+		{73334238-8374-40A1-9FBE-EE5016E6D291}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A057650-084C-4900-AD6D-A0C4D42DFC1E}
+	EndGlobalSection
+EndGlobal
