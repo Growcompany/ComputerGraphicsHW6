@@ -91,15 +91,6 @@
    8비트 RGB 값을 0~1 범위의 실수로 변환해 최종 이미지 버퍼에 채웁니다.
 
 10. **Handle window resize**  
-    창 크기 변경 시 뷰포트와 투영을 재설정한 뒤, 렌더링 과정을 다시 실행합니다.
-
-11. **Initialize render loop**  
-    GLFW 초기화, 윈도우 생성, 픽셀 정렬 설정을 수행합니다.
-
-12. **Draw frame**  
-    매 프레임 `glClear` → `glDrawPixels(OutputImage)` → `glfwSwapBuffers` 순으로 이미지를 화면에 그립니다.
-
-13. **Handle window resize**  
     `resize_callback`에서 뷰포트(`glViewport`)와 투영(`glOrtho`)을 재설정한 뒤 `render()`를 호출해 이미지를 띄워줍니다.
 
 ---
